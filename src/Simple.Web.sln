@@ -103,9 +103,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DefaultSimpleContainer.Test
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simple.Web.Razor.Tests.ExternalDummyAssembly", "Simple.Web.Razor.Tests.ExternalDummyAssembly\Simple.Web.Razor.Tests.ExternalDummyAssembly.csproj", "{93A1F038-AF12-4BEA-8EFB-13007A01EF50}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simple.Optimization", "Simple.Web.Optimization\Simple.Optimization.csproj", "{2CEE3EFE-C1A8-4D96-A8EC-C8AAD0CF5CD7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simple.Web.Optimization", "Simple.Web.Optimization\Simple.Web.Optimization.csproj", "{2CEE3EFE-C1A8-4D96-A8EC-C8AAD0CF5CD7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simple.Optimization.Tests", "Simple.Web.Optimization.Tests\Simple.Optimization.Tests.csproj", "{CCEC27FA-626F-44C4-A0B7-728B157681E0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simple.Web.Optimization.Tests", "Simple.Web.Optimization.Tests\Simple.Web.Optimization.Tests.csproj", "{CCEC27FA-626F-44C4-A0B7-728B157681E0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
