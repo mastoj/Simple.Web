@@ -228,6 +228,7 @@ namespace Simple.Web.Razor
 
         public Type GetViewType(Type handlerType, Type modelType)
         {
+            
             InitializeIfNot();
 
             Type type;

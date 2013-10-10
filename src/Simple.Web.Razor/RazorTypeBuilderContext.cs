@@ -38,9 +38,11 @@
                 if (_defaultAssemblies == null)
                 {
                     var folderAssemblies = ScanFolderForAssemblies();
+                    var appDomainAssemblies = AppDomain.CurrentDomain.GetAssemblies();
                     _defaultAssemblies = SimpleRazorConfiguration.NamespaceImports.Where(ni => ni.Value != null)
                         .Select(ni => ni.Value)
                         .Concat(folderAssemblies)
+                        .Concat(appDomainAssemblies)
                         .Where(IsValidReference)
                         .Where(an => !an.IsDynamic)
                         .GroupBy(an => an.FullName)
