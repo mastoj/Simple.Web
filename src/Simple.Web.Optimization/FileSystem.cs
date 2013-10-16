@@ -1,4 +1,6 @@
-﻿namespace Simple.Web.Optimization
+﻿using System.Linq;
+
+namespace Simple.Web.Optimization
 {
     using System;
     using System.Collections.Generic;
@@ -17,13 +19,19 @@
 
         public string GetFullPath(string path)
         {
-            throw new System.NotImplementedException();
+            return PathHelper.GetPath(path);
         }
 
         public string GetContent(string path)
         {
-            throw new System.NotImplementedException();
-
+            if (IsFile(path))
+            {
+                using (var streamReader = new StreamReader(new FileInfo(path).OpenRead()))
+                {
+                    return streamReader.ReadToEnd();
+                }
+            }
+            throw new ArgumentException("Path is not a file: " + path, "path");
         }
 
         public bool IsFile(string path)
@@ -38,7 +46,13 @@
 
         public IEnumerable<string> GetFiles(string folderPath)
         {
-            throw new System.NotImplementedException();
+            var directoryInfo = new DirectoryInfo(GetFullPath(folderPath));
+            if (directoryInfo.Exists)
+            {
+                var files = directoryInfo.GetFiles().Select(y => y.FullName);
+                return files;
+            }
+            throw new ArgumentException("Folder path is not a directory: " + folderPath, "folderPath");
         }
     }
 }
