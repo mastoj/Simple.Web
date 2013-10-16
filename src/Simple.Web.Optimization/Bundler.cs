@@ -19,5 +19,14 @@ namespace Simple.Web.Optimization
         {
             return _bundleCollection.GetBundle(bundlePath);
         }
+
+        public static string GetBundleContent(string path)
+        {
+            if (path == "/hello")
+            {
+                return "Hello world!";                
+            }
+            return null;
+        }
     }
 }

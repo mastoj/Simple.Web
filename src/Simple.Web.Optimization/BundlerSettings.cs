@@ -15,5 +15,20 @@
                 _optimize = value;
             }
         }
+
+        public static IFileSystem _fileSystem;
+
+        public static IFileSystem FileSystem
+        {
+            get
+            {
+                _fileSystem = _fileSystem ?? new FileSystem();
+                return _fileSystem;
+            }
+            set
+            {
+                _fileSystem = value;
+            }
+        }
     }
 }

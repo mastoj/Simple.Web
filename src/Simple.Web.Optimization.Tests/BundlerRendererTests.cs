@@ -37,5 +37,7 @@ namespace Simple.Web.Optimization.Tests
             Assert.Equal("<script type='text/javascript' src='/assets/js/file1.js' />", actual[0]);
             Assert.Equal("<script type='text/javascript' src='/assets/js/file2.js' />", actual[1]);
         }
+
+
     }
 }

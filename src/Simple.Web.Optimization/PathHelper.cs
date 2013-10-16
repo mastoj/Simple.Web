@@ -25,7 +25,7 @@ namespace Simple.Web.Optimization
         
         private static string AssemblyAppRoot(string typePath)
         {
-            var pattern = @"(\\|/)bin(\\|/)?([Dd]ebug|[Rr]elease)?$";
+            const string pattern = @"(\\|/)bin(\\|/)?([Dd]ebug|[Rr]elease)?$";
             var target = Path.GetDirectoryName(typePath);
             return target.RegexReplace(pattern, string.Empty);
         }
