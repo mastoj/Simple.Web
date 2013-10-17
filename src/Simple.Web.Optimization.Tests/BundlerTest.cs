@@ -42,7 +42,6 @@ namespace Simple.Web.Optimization.Tests
 
             var files = Bundler.GetBundle(_bundlePath).GetFiles().ToList();
             Assert.Equal(1, files.Count);
-            Assert.Equal("file1.js", files[0].Name);
         }
 
         [Fact]
@@ -61,8 +60,6 @@ namespace Simple.Web.Optimization.Tests
 
             var files = Bundler.GetBundle(_bundlePath).GetFiles().ToList();
             Assert.Equal(2, files.Count);
-            Assert.Equal("file1.js", files[0].Name);
-            Assert.Equal("file2.js", files[1].Name);
         }
     }
 }

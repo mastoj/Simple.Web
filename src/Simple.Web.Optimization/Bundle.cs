@@ -44,7 +44,7 @@
             get { return _bundleDefinition; }
         }
 
-        public IEnumerable<FileInfo> GetFiles()
+        public IEnumerable<string> GetFiles()
         {
             return _bundleDefinition.GetFiles();
         }
@@ -84,9 +84,9 @@
         public string Render()
         {
             var output = new StringBuilder();
-            foreach (var fileInfo in GetFiles())
+            foreach (var filePaths in GetFiles())
             {
-                var serverPath = PathHelper.GetServerPath(fileInfo.FullName);
+                var serverPath = PathHelper.GetServerPath(filePaths);
                 output.AppendLine(string.Format(Template, serverPath));
             }
             return output.ToString();

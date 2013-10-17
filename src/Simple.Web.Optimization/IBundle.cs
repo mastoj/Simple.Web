@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.IO;
 
 namespace Simple.Web.Optimization
 {
@@ -9,7 +8,7 @@ namespace Simple.Web.Optimization
     {
         string BundlePath { get; }
         BundleDefinition BundleDefinition { get; }
-        IEnumerable<FileInfo> GetFiles();
+        IEnumerable<string> GetFiles();
         Task WriteOutput(IDictionary<string, object> env);
         string Render();
     }
